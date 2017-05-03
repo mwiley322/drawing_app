@@ -21,13 +21,14 @@
         padding: 10px;
         position: fixed;
         top: 0;
-        background-color: pink;
+        background-color: #505050;
       }
 
       .radControl {
         width: 30px;
         height: 30px;
         background-color: #fff;
+        color: black;
         display: inline-block;
         border-radius: 5px;
         text-align: center;
@@ -48,7 +49,6 @@
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5);
         display: inline-block;
         margin-left: 10px;
-        background-color: cyan;
       }
 
       .swatch.active {
@@ -73,7 +73,7 @@
   </head>
   <body style="margin: 0">
     <div id="toolbar">
-      <div id="rad">
+      <div id="rad" style="color:white">
         Radius <span id="radVal">10</span>
         <div class="radControl" id="incRad">+</div>
         <div class="radControl" id="decRad">-</div>
@@ -87,10 +87,10 @@
     </div>
     <canvas id="drawing" style="display: block;">
     </canvas>
-      <script src="../javascript/drawing.js"></script>
-      <script src="../javascript/radius.js"></script>
-      <script src="../javascript/colors.js"></script>
-      <script src="../javascript/save.js"></script>
+      <script src="drawing.js"></script>
+      <script src="radius.js"></script>
+      <script src="colors.js"></script>
+      <script src="save.js"></script>
 
   </body>
 </html>
