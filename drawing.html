@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing</title>
+
+    <style>
+      *{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        font-family: sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+
+      #toolbar {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        background-color: pink;
+      }
+
+      .radControl {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px;
+      }
+      #rad {
+        float: left;
+      }
+
+      #colors {
+        float: right;
+      }
+
+      .swatch {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        margin-left: 10px;
+        background-color: cyan;
+      }
+
+      .swatch.active {
+        border:2px solid white;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      #save {
+        float: right;
+        margin-right: 20px;
+        border-radius: 5px;
+        height: 30px;
+        padding: 8px;
+        background-color: #fff;
+      }
+
+      #save:hover {
+        background-color: #818181;
+      }
+
+    </style>
+  </head>
+  <body style="margin: 0">
+    <div id="toolbar">
+      <div id="rad">
+        Radius <span id="radVal">10</span>
+        <div class="radControl" id="incRad">+</div>
+        <div class="radControl" id="decRad">-</div>
+      </div>
+      <div id="colors">
+      </div>
+      <div id="save">
+        <iframe id="downloadFrame" hidden=yes></iframe>
+        Save
+      </div>
+    </div>
+    <canvas id="drawing" style="display: block;">
+    </canvas>
+      <script src="../javascript/drawing.js"></script>
+      <script src="../javascript/radius.js"></script>
+      <script src="../javascript/colors.js"></script>
+      <script src="../javascript/save.js"></script>
+
+  </body>
+</html>
